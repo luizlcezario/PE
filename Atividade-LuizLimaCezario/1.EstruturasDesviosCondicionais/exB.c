@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * @brief B Dado o pre¸co `a vista de um determinado produto, calcular o pre¸co total a pagar e o valor da presta¸c˜ao mensal, referentes ao pagamento parcelado. Se o pagamento for parcelado em trˆes vezes, dever´a ser dado um acr´escimo de 10% no total a ser pago. Se o pagamento for parcelado em cinco vezes, o acr´escimo ´e de 20%.
+ *
+ */
+
 int main(void)
 {
 	double value;

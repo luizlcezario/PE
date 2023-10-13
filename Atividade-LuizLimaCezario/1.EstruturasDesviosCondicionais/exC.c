@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/**
+ * @brief Leia 3 valores inteiros e imprima-os de duas formas: na ordem de leitura e em ordem decrescente.
+ *
+ */
+
 int *ordem(int *values, int numMax)
 {
 	int tmp = 0, c = 0;

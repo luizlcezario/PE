@@ -1,6 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+/**
+ * @brief A Construa um programa em C que receba os nomes de 2 produtos de uma loja e o pre¸co unit´ario de cada um deles (em reais). O programa dever´a informar, com mensagens explicativas:
+	• o nome dos produtos cujo pre¸co ´e superior a 20 reais;
+	• o nome e o pre¸co correspondente dos produtos cujo pre¸co ´e inferior a 10 reais
+ */
 int main(void)
 {
 	char produtos[3][50];
