@@ -10,8 +10,6 @@ int main(void)
 		{
 			if (j < i + 1) 
 				printf("*");
-			else
-				printf(" ");
 		}
 		printf("\n");
 	}
