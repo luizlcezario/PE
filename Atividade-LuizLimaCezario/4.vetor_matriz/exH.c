@@ -18,15 +18,19 @@ void contAE(char *name)
 	printf("o nome %s contem %i letras 'a' e  %i letras 'e'.\n", name, a, e);
 }
 
-int main()
+int main(void)
 {
 	char name[50];
-	char name2[50];
 
 	printf("digite um nome: ");
 	scanf("%s", name);
-	printf("digite um nome: ");
-	scanf("%s", name2);
 	contAE(name);
-	contAE(name2);
+
+	printf("digite um nome: ");
+	scanf("%s", name);
+	contAE(name);
+
+	printf("digite um nome: ");
+	scanf("%s", name);
+	contAE(name);
 }
