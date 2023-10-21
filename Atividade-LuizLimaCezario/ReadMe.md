@@ -1,0 +1,1 @@
+Professor deixei em cada pasta um arquivo Makefile para o compilar todos os exercicios e voce testar, fiz main para todos ja que nao foi explicado no pdf se precisava ter ou nao se vc passaria por teste unitarios ou nao resolvi deixar tudo funcional e testavel assim ficaria mais facil para voce espero nao perder pontos por isso, desculpe caso nao fosse a sua intencao essa.

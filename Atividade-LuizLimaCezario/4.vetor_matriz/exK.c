@@ -12,47 +12,20 @@ int printMatriz(int **matriz, int l, int c)
 	{
 		printf("[ ");
 		for (int i = 0; i < c; i++)
-			printf("%4i ", matrizT[j][i]);
+			printf("%4i ", matriz[j][i]);
 		printf("]\n");
 	}
 }
 
-int mediaMatrizLine(int **matriz, int l)
+int printTransposta(int **matriz, int l, int c)
 {
-	int m = 0;
-	int a = 0;
-
-	printf("digite o numero da Linha que sera feita a media: ");
-	scanf("%i", &a);
-	if (a > l || a < 1)
+	for (int j = 0; j < c; j++)
 	{
-		printf("erro digite uma linha valida!");
-		exit(0);
+		printf("[ ");
+		for (int i = 0; i < l; i++)
+			printf("%4i ", matriz[i][j]);
+		printf("]\n");
 	}
-	for (int i = 0; i < l; i++)
-	{
-		m += matriz[a][i];
-	}
-	return m / l;
-}
-
-int mediaMatrizColuna(int **matriz, int c)
-{
-	int m = 0;
-	int a = 0;
-
-	printf("digite o numero da Coluna que sera feita a media: ");
-	scanf("%i", &a);
-	if (a > l || a < 1)
-	{
-		printf("erro digite uma Coluna valida!");
-		exit(0);
-	}
-	for (int i = 0; i < l; i++)
-	{
-		m += matriz[a][i];
-	}
-	return m / l;
 }
 
 void readMatriz(int **matriz, int l, int c)
@@ -61,52 +34,26 @@ void readMatriz(int **matriz, int l, int c)
 	{
 		for (int i = 0; i < c; i++)
 		{
-			printf("digite o numero da posicao %i da linha %i : ", i, j);
-			scanf("%i", &matriz[j][i]);
+			int a = 0;
+			printf("digite o numero da posicao %i da linha %i : ", i + 1, j + 1);
+			scanf("%i", &a);
+			matriz[j][i] = a;
 		}
 	}
 }
-int printMenu()
-{
-	printf("Digite oque deseja fazer:\n
-		1.printar Matriz\n
-		2.Calcular media de numeros de uma linha\n
-		3.Calcular media de numeros de uma coluna\n
-		4.Soma da diagonal\n
-		5.Verificar simetria\n
-		6.trocar valores de uma linha\n
-		7.Trocar soma de uma linha e uma coluna\n
-		8.Verifica se a um elemento dominante na matriz\n
-		0.EXIT\n
-	");
-	int a;
-	scanf("%i", &a);
-	return a;
-}
-
 int main()
 {
-	int c, l = 1;
+	int c = 1, l = 1;
 	printf("digite o numero de linhas: ");
 	scanf("%i", &l);
 	printf("digite o numero de colunas: ");
 	scanf("%i", &c);
-	if (l < 1 || l > 1000 || c < 1 || c > 1000)
+	if (l < 1 || l > 30 || c < 1 || c > 30)
 		printf("por favor digite um l ou c que seja valido");
 	int matriz[l][c];
-	int option = 1;
-	while (option != 0)
-	{
-		option = printMenu();
-		if (option == 1)
-			printMatriz();
-		else if (option == 2)
-			printf("a medi e %i!", mediaMatrizLine(matriz, l));
-		else if (option == 2)
-			printf("a medi e %i!", mediaMatrizColuna(matriz, l));
-	}
-	readMatriz(matriz, l c);
-	printMatriz(matriz, l c);
-	printf("media da linha %i", mediaMatrizLine(matriz, l));
-	printf("media da linha %i", mediaMatrizColuna(matriz, c));
+	readMatriz((int **)matriz, l, c);
+	printf("original\n");
+	printMatriz((int **)matriz, l, c);
+	printf("transposta\n");
+	printTransposta((int **)matriz, l, c);
 }
